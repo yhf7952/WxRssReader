@@ -1,0 +1,21 @@
+<!--pages/about/index.wxml-->
+<view class='container'>
+  <view class='zan-panel-title'>关于</view>
+  <view class='zan-panel doc-description'>
+    <view class='wxParse-p'>
+      岩兔Rss阅读器是基于微信小程序开发的Rss阅读器。订阅源允许手动添加或批量导入，导入的源可查看最近10篇文章。
+    </view>
+    <view class='wxParse-p'>
+      本程序由岩兔站开发，代码开源于GitHub，欢迎讨论交流：https://github.com/yhf7952/WxRssReader
+    </view>
+    <view class='wxParse-p'>
+      技术支持：岩兔站
+    </view>
+    <view class='wxParse-p'>
+      博客地址：https://yantuz.cn/
+    </view>
+    <view class='wxParse-p'>
+      联系方式：yhf7952@gmail.com
+    </view>
+  </view>
+</view>

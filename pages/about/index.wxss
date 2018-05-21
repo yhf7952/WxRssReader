@@ -1,0 +1,6 @@
+/* pages/about/index.wxss */
+.wxParse-p{
+  line-height: 26px;
+  margin: 6px 0;
+  text-indent: 2em;
+}

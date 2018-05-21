@@ -1,0 +1,14 @@
+/* pages/rss/view.wxss */
+.wxParse-p{
+  line-height: 24px;
+  margin: 6px 0;
+  text-indent: 2em;
+}
+.wxParse-p image{
+  margin-left:-2em;
+}
+.viewLink{
+  margin-top:20px;
+  border-top:1px solid #eee;
+  padding-top:10px;
+}

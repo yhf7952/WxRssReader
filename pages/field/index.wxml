@@ -1,0 +1,139 @@
+<import src="/dist/field/index.wxml" />
+
+<view class="container">
+  <view class="doc-title zan-hairline--bottom">Field</view>
+
+  <!-- Field 基础用法 -->
+  <view class="zan-panel-title">基础用法</view>
+  <view class="zan-panel">
+    <template
+      is="zan-field"
+      data="{{ ...config.base.name, value }}"></template>
+    <template
+      is="zan-field"
+      data="{{ ...config.base.tel }}"></template>
+    <template
+      is="zan-field"
+      data="{{ ...config.base.address }}"></template>
+  </view>
+
+  <view class="zan-btns">
+    <button
+      class="zan-btn zan-btn--primary"
+      bindtap="clearInput">清除输入</button>
+  </view>
+
+  <!-- 去除标题后的输入框样式 -->
+  <view class="zan-panel-title">无标题输入框</view>
+  <view class="zan-panel">
+    <template
+      is="zan-field"
+      data="{{ ...config.notitle, value: textareaValue }}"></template>
+  </view>
+
+  <view class="zan-btns">
+    <button
+      class="zan-btn zan-btn--primary"
+      bindtap="clearTextarea">清除输入</button>
+  </view>
+
+  <!-- 使用 Field 圆角样式 -->
+  <view class="zan-panel-title field__title--radius">圆角输入框</view>
+  <template
+    is="zan-field"
+    data="{{ ...config.radius.totalPrice }}"></template>
+  <template
+    is="zan-field"
+    data="{{ ...config.radius.excludePrice }}"></template>
+  <template
+    is="zan-field"
+    data="{{ ...config.radius.notitle }}"></template>
+
+  <!-- form 中使用 Field -->
+  <view class="zan-panel-title">Form 表单中的field应用</view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="zan-panel">
+      <template
+        is="zan-field"
+        data="{{ ...config.form.name }}"></template>
+      <template
+        is="zan-field"
+        data="{{ ...config.form.tel }}"></template>
+      <view class="zan-btns">
+        <button
+          class="zan-btn zan-btn--primary"
+          formType="submit">提交数据</button>
+        <button
+          class="zan-btn"
+          formType="reset">重置数据</button>
+      </view>
+    </view>
+  </form>
+
+  <view class="zan-panel-title">自定义显示内容</view>
+  <view class="zan-panel">
+    <!-- 配合 popup 使用 picker-view -->
+    <view class="zan-cell zan-field">
+      <view class="zan-cell__hd zan-field__title">人员信息</view>
+      <view
+        class="zan-field__input zan-cell__bd"
+        bindtap="handleDateFieldClick"
+      >
+        出生日期: {{ pickerViewConfig.year[pickerViewConfig.value[0]] }}
+        性别: {{ pickerViewConfig.sex[pickerViewConfig.value[1]] }}
+      </view>
+    </view>
+    <!-- 对应的 popup 层 -->
+    <view
+      class="zan-popup zan-popup--bottom {{ pickerViewConfig.show ? 'zan-popup--show' : ''}}"
+    >
+      <view class="zan-popup__mask" bindtap="hideDatePopup"></view>
+      <view class="zan-popup__container popup-field-example--bottom">
+        <picker-view
+          value="{{ pickerViewConfig.value }}"
+          indicator-style="height: 50px"
+          class="picker-view-example"
+          bindchange="handlePopupDateChange"
+        >
+          <picker-view-column>
+            <view
+              class="picker-view-column-example"
+              wx:for="{{ pickerViewConfig.year }}"
+            >{{item}}年</view>
+          </picker-view-column>
+          <picker-view-column>
+            <view
+              class="picker-view-column-example"
+              wx:for="{{ pickerViewConfig.sex }}"
+            >{{item}}</view>
+          </picker-view-column>
+        </picker-view>
+      </view>
+    </view>
+
+    <!-- 简单 picker 示例 -->
+    <view class="zan-cell zan-field">
+      <view class="zan-cell__hd zan-field__title">选择区域</view>
+      <picker
+        mode="selector"
+        class="zan-field__input zan-cell__bd"
+        range="{{ area }}"
+        value="{{ areaIndex }}"
+        bindchange="onAreaChange"
+      >
+        {{ area[areaIndex] }}
+      </picker>
+    </view>
+
+    <view class="zan-cell zan-field">
+      <view class="zan-cell__hd zan-field__title">验证码</view>
+      <input
+        type="text"
+        placeholder="请输入短信验证码"
+        class="zan-field__input zan-cell__bd"/>
+      <view class="zan-cell__ft">
+        <button class="zan-btn zan-btn--mini zan-btn--primary">获取验证码</button>
+      </view>
+    </view>
+  </view>
+</view>

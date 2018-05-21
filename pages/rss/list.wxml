@@ -1,0 +1,14 @@
+<!--pages/rss/list.wxml-->
+<view class="container">
+
+  <block>
+    <view class="zan-panel-title">{{ title }}</view>
+    <view class="zan-panel">
+      <navigator wx:for="{{ items }}" wx:key="item" class="zan-cell zan-cell--access" url="/pages/rss/view?id={{ index }}">
+        <view class="zan-cell__bd">{{ item.title.text }}</view>
+        <view class="zan-cell__ft"></view>
+      </navigator>
+    </view>
+  </block>
+  
+</view>

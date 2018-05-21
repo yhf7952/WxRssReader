@@ -1,0 +1,15 @@
+<!--pages/rssManage/export.wxml-->
+<view class="container">
+    <view class="zan-panel-title">OPML导入/导出</view>
+    <form bindsubmit="importOpml">
+    <view class="zan-panel">
+      <view class='zan-cell zan-field'>
+        <textarea class="zan-field__input zan-cell__bd" style="height:20em" value='{{ opml }}' maxlength="-1" name="opml"></textarea>
+      </view>
+    </view>
+    <view style="padding: 15px;">
+      <button bindtap='copyOpml' class="zan-btn zan-btn--small zan-btn--primary">导出至剪切板</button>
+      <button formType="submit" class="zan-btn zan-btn--small zan-btn--warn">导入</button>
+    </view>
+    </form>
+</view>

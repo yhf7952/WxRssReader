@@ -1,0 +1,28 @@
+<!--pages/rssManage/edit.wxml-->
+<import src="/dist/toast/index.wxml" />
+<import src="/dist/field/index.wxml" />
+<import src="/dist/dialog/index.wxml" />
+
+<view class="container">
+  <view class="doc-title zan-hairline--bottom">{{ title }}</view>
+
+  <!-- Field 基础用法 -->
+  <view class="zan-panel-title">站点信息</view>
+  <form bindsubmit="saveSubmit" class="zan-panel">
+    <template
+      is="zan-field"
+      data="{{ ...fields.url }}"></template>
+    <template
+      is="zan-field"
+      data="{{ ...fields.name }}"></template>
+    <view class="zan-btns">
+      <button formType="submit" class="zan-btn zan-btn--primary">保存</button>
+      <button wx:if="{{ isEdit }}"
+        class="zan-btn zan-btn--danger"
+        bindtap="deleteSite">删除</button>
+    </view>
+  </form>
+</view>
+
+<template is="zan-toast" data="{{ zanToast }}"></template>
+<template is="zan-dialog" data="{{ zanDialog }}"></template>

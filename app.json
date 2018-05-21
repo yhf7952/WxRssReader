@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/rss/index",
+    "pages/dashboard/index",
+    "pages/actionsheet/index",
+    "pages/btn/index",
+    "pages/badge/index",
+    "pages/capsule/index",
+    "pages/card/index",
+    "pages/cell/index",
+    "pages/dialog/index",
+    "pages/field/index",
+    "pages/helper/index",
+    "pages/icon/index",
+    "pages/layout/index",
+    "pages/loadmore/index",
+    "pages/noticebar/index",
+    "pages/panel/index",
+    "pages/popup/index",
+    "pages/stepper/index",
+    "pages/steps/index",
+    "pages/switch/index",
+    "pages/tab/index",
+    "pages/tag/index",
+    "pages/toptips/index",
+    "pages/toast/index",
+    "pages/select/index",
+    "pages/rss/list",
+    "pages/rss/view",
+    "pages/rssManage/index",
+    "pages/rssManage/edit",
+    "pages/rssManage/export",
+    "pages/about/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#FAFAFA",
+    "navigationBarTitleText": "岩兔Rss阅读器",
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#f9f9f9"
+  },
+  "debug": false
+}

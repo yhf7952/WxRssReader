@@ -1,0 +1,7 @@
+/* pages/rss/index.wxss */
+.logo {
+  display: block;
+  margin: 20px auto;
+  width: 84px;
+  height: 75px;
+}

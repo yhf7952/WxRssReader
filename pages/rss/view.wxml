@@ -1,0 +1,10 @@
+<!--pages/rss/view.wxml-->
+<import src="../wxParse/wxParse.wxml"/>
+  <view class="doc-title zan-hairline--bottom">{{ title }}</view>
+  <view class='doc-description'>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+    <hr/>
+    <view class="viewLink zan-c-green">原文地址：{{url}}
+    <button bindtap='copyUrl' class="zan-btn zan-btn--small zan-btn--primary">复制链接</button>
+    </view>
+  </view>

@@ -1,0 +1,22 @@
+<import src="/dist/tab/index.wxml" />
+
+<view class="container">
+
+  <view class="doc-title zan-hairline--bottom">TAB</view>
+
+  <view style="margin: 20px 0">
+    <template
+      is="zan-tab"
+      data="{{ ...tab1, componentId: 'tab1' }}"></template>
+  </view>
+  <view style="margin: 20px 0">
+    <template
+      is="zan-tab"
+      data="{{ ...tab2, componentId: 'tab2' }}"></template>
+  </view>
+  <view style="margin: 20px 0">
+    <template
+      is="zan-tab"
+      data="{{ ...tab3, componentId: 'tab3' }}"></template>
+  </view>
+</view>

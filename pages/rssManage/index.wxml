@@ -1,0 +1,17 @@
+<!--pages/rssManage/index.wxml-->
+<view class="container">
+
+  <block>
+    <view class="zan-panel-title">订阅列表</view>
+    <view class="zan-panel">
+      <navigator wx:for="{{ items }}" wx:key="item" class="zan-cell zan-cell--access" url="/pages/rssManage/edit?id={{ index }}" open-type="redirect">
+        <view class="zan-cell__bd">{{ item.name }}</view>
+        <view class="zan-cell__ft"></view>
+      </navigator>
+    </view>
+    <view class="zan-btns">
+      <button bindtap="addSite" class="zan-btn zan-btn--primary"><i class="zan-icon zan-icon-add"></i> 新增站点</button>
+    </view>
+  </block>
+  
+</view>
