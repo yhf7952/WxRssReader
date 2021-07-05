@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    url: 'https://yantuz.cn/view.php?v=' + Math.random() +"&url=",
+    url: 'https://bak.yantuz.cn:8000/view.php?v=' + Math.random() +"&url=",
     title:'岩兔站',
     items:[]
   },
@@ -26,7 +26,7 @@ Page({
     if (options.url && options.url != ""){
       url += options.url;
     }else{
-      url+="https://yantuz.cn/feed"
+      url+="https://yantuz.cn/atom.xml"
     }
 //console.log(url);
     appInstance.getRss(url,function(json){

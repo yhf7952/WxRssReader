@@ -29,8 +29,8 @@ Page({
     var items = wx.getStorageSync('SiteData');
     var item = items[options.id];
     //console.log(item);
-    that.setData({title:item.title.text,url:item.link.text})
-    var html = item.content ? item.content.text : item.description.text;
+    that.setData({title:item.title.text,url: item.link.text|| item.link.href})
+    var html = item.content ? item.content.text : (item.summary ? item.summary.text : item.description.text);
     html = htmlDecodeByRegExp(html)
     WxParse.wxParse('article', 'html', html, that, 5);
   },

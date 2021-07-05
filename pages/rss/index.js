@@ -48,7 +48,7 @@ Page({
 
     if(site == ""){
       site = new Array()
-      site[0] = { name: "岩兔站", url: "https://yantuz.cn/feed"};
+      site[0] = { name: "岩兔站", url: "https://yantuz.cn/atom.xml"};
       wx.setStorageSync('Sites', site)
     }
 

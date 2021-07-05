@@ -4,7 +4,7 @@ WxRssReader-用微信小程序开发的Rss阅读器，可手工添加或批量�
 
 ## 小程序码
 
-![](https://ws2.sinaimg.cn/large/007452UMly1frj6gansi9j30760763yu.jpg)
+![](https://bak.yantuz.cn:8000/weiboUploader-Watermark/upload/2021/07/60e2b1c339614.jpg)
 
 ## 界面截图
 
@@ -16,7 +16,7 @@ WxRssReader-用微信小程序开发的Rss阅读器，可手工添加或批量�
 
 进入“管理订阅列表”-“添加订阅源”分别输入Feed地址和名称即可，如：
 
-* __Feed__:https://yantuz.cn/feed/
+* __Feed__:https://yantuz.cn/atom.xml
 * __名称__:岩兔站
 
 2. 批量导入Feed，形式必须为标准OPML格式，如：
@@ -25,7 +25,7 @@ WxRssReader-用微信小程序开发的Rss阅读器，可手工添加或批量�
 <?xml version="1.0" encoding="ISO-8859-1"?><opml version="2.0">
 <head><title>岩兔RSS阅读器</title></head>
 <body>
-<outline type="rss" text="岩兔站" xmlUrl="https://yantuz.cn/feed"/>
+<outline type="rss" text="岩兔站" xmlUrl="https://yantuz.cn/atom.xml"/>
 </body>
 ```
 
@@ -35,15 +35,9 @@ WxRssReader-用微信小程序开发的Rss阅读器，可手工添加或批量�
 
 |文章列表|阅读文章|
 |---|---
-|![](https://ws2.sinaimg.cn/large/007452UMly1frj6yoxim8j30dw0osdn3.jpg)|![](https://ws3.sinaimg.cn/large/007452UMly1frj6vkr0d8j30dw0omqak.jpg)
+|![](https://bak.yantuz.cn:8000/weiboUploader-Watermark/upload/2021/07/60e2b45f0ed74.png)|![](https://bak.yantuz.cn:8000/weiboUploader-Watermark/upload/2021/07/60e2b45f1a220.png)
 
 ## 关注我
 
 * 博客：[岩兔站](https://yantuz.cn "岩兔站-关注互联网折腾服务器分享码农的日常")
 * 微博：[新浪微博](https://weibo.com/yztop "岩兔站")
-
-## 觉得好用！打赏楼主推出更好的作品
-
-|支付宝|微信|
-|---|---
-|![](https://ws4.sinaimg.cn/large/007452UMly1fqa26f6fdaj308c08caab.jpg)|![](https://ws1.sinaimg.cn/large/007452UMly1fqa1vf6njtj308c08c0t2.jpg)

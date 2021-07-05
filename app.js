@@ -19,8 +19,13 @@ App({
         }catch (err){}
         //data = htmlDecodeByRegExp(data)
         data = unescape(data.replace(/&#x/g, '%u').replace(/;/g, ''))
-        //console.log(data);
-        var json = xml2json(data).rss.channel.item.slice(0,10);
+        //console.log(xml2json(data));
+        var json; 
+        try {
+          json = xml2json(data).rss.channel.item.slice(0,10);    
+        } catch(err){
+          json = xml2json(data).feed.entry.slice(0,10);
+        }
         //console.log(json);
         fn(json);
       }

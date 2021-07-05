@@ -39,5 +39,6 @@
     "backgroundTextStyle": "dark",
     "backgroundColor": "#f9f9f9"
   },
-  "debug": false
+  "debug": false,
+  "sitemapLocation": "sitemap.json"
 }
