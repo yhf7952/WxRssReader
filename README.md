@@ -8,7 +8,7 @@ WxRssReader-用微信小程序开发的Rss阅读器，可手工添加或批量�
 
 ## 界面截图
 
-![](https://ws3.sinaimg.cn/large/007452UMly1frj6kjeu9jj30dw0otdke.jpg)
+![](https://bak.yantuz.cn:8000/WP_Db/images/wx2.sinaimg.cn/large/007452UMly1frlk0rajydj30dw0hnn0k.jpg)
 
 ## 使用说明
 
